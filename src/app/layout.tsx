@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Bebas_Neue, Raleway } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const bebas_neue = Bebas_Neue({
+  weight: "400",
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${raleway.variable} ${bebas_neue.variable} antialiased`}
       >
         {children}
       </body>

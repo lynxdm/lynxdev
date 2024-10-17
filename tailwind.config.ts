@@ -10,7 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+      },
+      fontFamily: {
+        raleway: "var(--font-raleway)",
+        bebas_neue: "var(--font-bebas-neue)",
       },
     },
   },
