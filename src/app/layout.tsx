@@ -1,17 +1,36 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Raleway } from "next/font/google";
+import {
+  Bebas_Neue,
+  Commissioner,
+  Bilbo_Swash_Caps,
+  Almarai,
+} from "next/font/google";
 import "./globals.css";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
+const commissioner = Commissioner({
+  variable: "--font-commissioner",
   subsets: ["latin"],
   display: "swap",
-});
+})
 
 const bebas_neue = Bebas_Neue({
   weight: "400",
   variable: "--font-bebas-neue",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const almari = Almarai({
+  weight: ["400", "700", "800"],
+  variable: "--font-almari",
+  subsets: ["arabic"],
+  display: "swap",
+});
+
+const bilbo_swash_caps = Bilbo_Swash_Caps({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bilbo-swash",
   display: "swap",
 });
 
@@ -28,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${raleway.variable} ${bebas_neue.variable} antialiased`}
+        className={`${commissioner.variable} ${bebas_neue.variable} ${almari.variable} ${bilbo_swash_caps.variable} antialiased`}
       >
         {children}
       </body>

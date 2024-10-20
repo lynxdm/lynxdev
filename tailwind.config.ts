@@ -14,8 +14,10 @@ const config: Config = {
         secondary: "var(--secondary)",
       },
       fontFamily: {
-        raleway: "var(--font-raleway)",
+        commissioner: "var(--font-commissioner)",
         bebas_neue: "var(--font-bebas-neue)",
+        almari: " var(--font-almari)",
+        bilbo_swash_caps: "var(--font-bilbo-swash)",
       },
     },
   },

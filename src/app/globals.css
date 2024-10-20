@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #111;
-  --primary: #777;
+  --secondarybg: #111;
+  --background: #0f0f0f;
+  --primary: #777; 
   --secondary: #aaa;
+  --white: #d3d3d3;
+  --mid-orange: #e9ab8d;
 }
 
 body {
   background: var(--background);
   color: var(--primary);
-  font-family: var(--font-raleway);
+  font-family: var(--font-almari);
 }
 
 @layer utilities {
