@@ -5,13 +5,14 @@ import {
   Bilbo_Swash_Caps,
   Almarai,
 } from "next/font/google";
+import { ReactLenis } from "@/utilis/lenis";
 import "./globals.css";
 
 const commissioner = Commissioner({
   variable: "--font-commissioner",
   subsets: ["latin"],
   display: "swap",
-})
+});
 
 const bebas_neue = Bebas_Neue({
   weight: "400",
@@ -46,11 +47,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${commissioner.variable} ${bebas_neue.variable} ${almari.variable} ${bilbo_swash_caps.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <ReactLenis root>
+        <body
+          className={`${commissioner.variable} ${bebas_neue.variable} ${almari.variable} ${bilbo_swash_caps.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </ReactLenis>
     </html>
   );
 }
